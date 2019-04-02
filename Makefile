@@ -14,13 +14,13 @@ install:
 	kubectl rollout status -f es-data.yaml
 
 uninstall:
-	kubectl delete -f es-data.yaml
-	kubectl delete -f es-ingest.yaml
-	kubectl delete -f es-ingest-svc.yaml
-	kubectl delete -f es-master.yaml
-	kubectl delete -f es-svc.yaml
-	kubectl delete -f es-discovery-svc.yaml
+	-kubectl delete -f es-data.yaml
+	-kubectl delete -f es-ingest.yaml
+	-kubectl delete -f es-ingest-svc.yaml
+	-kubectl delete -f es-master.yaml
+	-kubectl delete -f es-svc.yaml
+	-kubectl delete -f es-discovery-svc.yaml
 
 get:
-	kubectl -n elasticsearch get all
+	kubectl -n elasticsearch get all -o wide
 

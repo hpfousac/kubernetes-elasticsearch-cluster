@@ -36,7 +36,7 @@ spec:
             fieldRef:
               fieldPath: metadata.name
         - name: CLUSTER_NAME
-          value: myesdb
+          value: sgc-cluster1
         - name: NUMBER_OF_MASTERS
           value: "2"
         - name: NODE_MASTER
@@ -61,11 +61,11 @@ spec:
         ports:
         - containerPort: 9300
           name: transport
-        livenessProbe:
-          tcpSocket:
-            port: transport
-          initialDelaySeconds: 20
-          periodSeconds: 10
+#       livenessProbe:
+#         tcpSocket:
+#           port: transport
+#         initialDelaySeconds: 20
+#         periodSeconds: 10
         volumeMounts:
         - name: storage
           mountPath: /data
