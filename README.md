@@ -1,3 +1,14 @@
+# Try of takeover #
+
+Temporary message or temporary fork.
+
+ I decided to fork original project which is (see bellow) as a base for my tests with elastic search in kubernetes.
+
+
+## Differences from original repo ##
+
+### Specific namespace
+
 # This project is no longer maintained
 
 As of November 7th, 2018, I've decided to end my commitment to maintaining this repo and related.
