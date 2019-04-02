@@ -7,7 +7,12 @@ Temporary message or temporary fork.
 
 ## Differences from original repo ##
 
-### Specific namespace
+### Specific namespace ###
+
+ All components will be placed in namespace *elasticsearch*
+
+
+----
 
 # This project is no longer maintained
 
