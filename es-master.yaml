@@ -2,6 +2,7 @@ apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
   name: es-master
+  namespace: elasticsearch
   labels:
     component: elasticsearch
     role: master
