@@ -12,8 +12,15 @@ install:
 	kubectl rollout status -f es-ingest.yaml
 	kubectl create -f es-data.yaml
 	kubectl rollout status -f es-data.yaml
+	kubectl create -f kibana-svc.yaml
+	kubectl create -f kibana-cm.yaml
+	kubectl create -f kibana.yaml
+	kubectl rollout status -f kibana.yaml
 
 uninstall:
+	-kubectl delete -f kibana.yaml
+	-kubectl delete -f kibana-cm.yaml
+	-kubectl delete -f kibana-svc.yaml
 	-kubectl delete -f es-data.yaml
 	-kubectl delete -f es-ingest.yaml
 	-kubectl delete -f es-ingest-svc.yaml
